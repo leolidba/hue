@@ -217,6 +217,9 @@ ${ assist.assistPanel() }
         </div>
         <h2 class="card-heading simple">${_('My Documents')}</h2>
         <span data-bind="text: path"></span>
+        <!-- ko if: parentDocument -->
+        <span data-bind="template: { name: 'document-template', data: parentDocument}"></span>
+        <!-- /ko -->
         <br/>
         <input data-bind="value: mkdirFormPath" placeholder="dir name, e.g. projects"></input>
         <a href="javascript:void(0);" class="btn" data-bind="click: mkdir"><i class="fa fa-plus-circle"></i> ${ _('Create Directory') }</a>

@@ -34,6 +34,7 @@
     self.assistHelper.withTotalStorage('assist', 'assist_panel_visible', self.isLeftPanelVisible, true);
 
     self.documents = ko.observableArray([]);
+    self.parentDocument = ko.observable();
     self.path = ko.mapping.fromJS('/');
     self.mkdirFormPath = ko.observable('');
     self.deleteFormPath = ko.observable('');
@@ -93,7 +94,9 @@
        path: path
       }, function(data) {
         self.path(path);
+        // Also data.directory, same as path but full object
         self.documents(data.documents);
+        self.parentDocument(ko.mapping.fromJS(data.parent));
       }).fail(function (xhr) {
         $(document).trigger("error", xhr.responseText);
       });
