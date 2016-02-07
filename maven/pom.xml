@@ -193,7 +193,7 @@
   <repositories>
     <repository>
       <id>cloudera.repos</id>
-      <url>https://repository.cloudera.com/content/groups/cdh-releases-rcs</url>
+      <url>http://repository.cloudera.com/cloudera/cdh-releases-rcs</url>
       <name>Cloudera Public Repositories</name>
       <snapshots>
         <enabled>false</enabled>
@@ -201,7 +201,7 @@
     </repository>
     <repository>
       <id>cloudera.snapshots.repo</id>
-      <url>https://repository.cloudera.com/content/repositories/snapshots</url>
+      <url>http://repository.cloudera.com/cloudera/libs-snapshot-local</url>
       <name>Cloudera Snapshots Repository</name>
       <snapshots>
         <enabled>true</enabled>
